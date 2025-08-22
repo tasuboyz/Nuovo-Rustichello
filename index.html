@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuovo Rustichello - Autentica Tradizione Italiana</title>
+    <meta name="description" content="Nuovo Rustichello - Ristorante tradizionale italiano nel cuore di Brescia. Specialità risotti, pasta fatta in casa e sapori autentici della Lombardia.">
+    <meta name="keywords" content="ristorante, Brescia, cucina italiana, risotto, pasta, tradizione, Lombardia">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Nuovo Rustichello - Autentica Tradizione Italiana">
+    <meta property="og:description" content="Scopri i sapori autentici della tradizione lombarda nel nostro accogliente ristorante">
+    <meta property="og:image" content="./images/esterno.jpg">
+    <meta property="og:type" content="restaurant">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <!-- Permissions policy note (accelerometer by default is blocked in many browsers) -->
+    <meta http-equiv="Permissions-Policy" content="accelerometer=()">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Nuovo Rustichello",
+        "description": "Ristorante tradizionale italiano specializzato in cucina lombarda",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via dei Sapori 25",
+            "addressLocality": "Brescia",
+            "postalCode": "25121",
+            "addressCountry": "IT"
+        },
+        "telephone": "+39 030 25203",
+        "url": "https://nuovorustichello.it",
+        "servesCuisine": "Italian",
+        "priceRange": "€€",
+        "openingHours": [
+            "Tu-Th 19:00-23:00",
+            "Fr-Sa 19:00-24:00", 
+            "Su 12:00-15:00,19:00-23:00"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="./images/logo.jpg" alt="Nuovo Rustichello Logo" class="logo-loading">
+                <h1>Nuovo Rustichello</h1>
+                <div class="loading-subtitle">Autentica Tradizione Italiana</div>
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar" id="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="./images/logo.jpg" alt="Nuovo Rustichello" class="nav-logo">
+                <h2>Nuovo <span>Rustichello</span></h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#storia" class="nav-link">La Nostra Storia</a>
+                <a href="#location" class="nav-link">Dove Siamo</a>
+                <a href="#contact" class="nav-link">Contatti</a>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="nav-cta">
+                <a href="tel:+390302520" class="btn-reserve">
+                    <i class="fas fa-phone"></i>
+                    Prenota
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-backgrounds">
+            <div class="hero-bg active" style="background-image: url('./images/esterno.jpg')"></div>
+            <div class="hero-bg" style="background-image: url('./images/interno.jpg')"></div>
+            <div class="hero-bg" style="background-image: url('./images/piatti.jpg')"></div>
+            <div class="hero-bg" style="background-image: url('./images/pastasciutta.jpg')"></div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word" data-delay="0">Autentica</span>
+                    <span class="word" data-delay="200">Tradizione</span>
+                    <span class="word" data-delay="400">Italiana</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Nel cuore di Brescia, dove ogni piatto racconta la storia 
+                    della genuina cucina lombarda e l'amore per la tradizione si tramanda di generazione in generazione
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-hero btn-primary" onclick="scrollToSection('menu')">
+                        <i class="fas fa-utensils"></i>
+                        Scopri il Menu
+                    </button>
+                    <button class="btn-hero btn-outline" onclick="window.open('tel:+390302520', '_self')">
+                        <i class="fas fa-phone"></i>
+                        Prenota Subito
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span>Scopri di più</span>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">La Nostra Gallery</h2>
+                <p class="section-subtitle">Un viaggio attraverso i sapori e l'atmosfera del Nuovo Rustichello</p>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Tutto</button>
+                <button class="filter-btn" data-filter="piatti">Piatti</button>
+                <button class="filter-btn" data-filter="atmosfera">Atmosfera</button>
+                <button class="filter-btn" data-filter="specialita">Specialità</button>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Popolato dinamicamente da JavaScript -->
+            </div>
+        </div>
+
+        <!-- Modal Gallery -->
+        <div class="gallery-modal" id="gallery-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-image-container">
+                    <img class="modal-image" id="modal-image" src="" alt="">
+                    <div class="modal-info">
+                        <h3 class="modal-title" id="modal-title"></h3>
+                        <p class="modal-description" id="modal-description"></p>
+                    </div>
+                </div>
+                <div class="modal-navigation">
+                    <button class="modal-nav prev" id="modal-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="modal-nav next" id="modal-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Showcase -->
+    <section class="menu-showcase" id="menu">
+        <div class="menu-background">
+            <div class="menu-pattern"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Le Nostre Specialità</h2>
+                <p class="section-subtitle">Piatti della tradizione lombarda preparati con ingredienti freschi e genuini</p>
+            </div>
+
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Tutto</button>
+                <button class="category-btn" data-category="antipasti">Antipasti</button>
+                <button class="category-btn" data-category="primi">Primi Piatti</button>
+                <button class="category-btn" data-category="risotti">Risotti</button>
+                <button class="category-btn" data-category="secondi">Secondi</button>
+                <button class="category-btn" data-category="dolci">Dolci</button>
+            </div>
+
+            <div class="menu-grid" id="menu-grid">
+                <!-- Popolato dinamicamente da JavaScript -->
+            </div>
+
+            <div class="menu-cta">
+                <div class="menu-special-offer">
+                    <div class="offer-content">
+                        <h3>🟣 RISOTTO DELLA SETTIMANA 🟣</h3>
+                        <p>Scopri la nostra creazione settimanale con ingredienti di stagione</p>
+                        <div class="offer-details">
+                            <span class="offer-wine">🍷 Abbinamento vino incluso</span>
+                            <span class="offer-phone">☎️ 030 25203 per info</span>
+                        </div>
+                    </div>
+                    <div class="offer-image">
+                        <img src="./images/🟣 RISOTTO DELLA SETTIMANA 🟣Vino rosso CurtefrancaCaprinoNoccioleVieni a provarlo ☎️ 030 25203.webp" alt="Risotto della Settimana">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storia Section -->
+    <section class="storia-section" id="storia">
+        <div class="storia-container">
+            <div class="storia-image-section">
+                <div class="storia-image-wrapper">
+                    <img src="./images/interno.jpg" alt="Interno Nuovo Rustichello" class="storia-image">
+                    <div class="storia-decorative"></div>
+                </div>
+            </div>
+            
+            <div class="storia-content">
+                <div class="storia-text">
+                    <span class="storia-label">La Nostra Storia</span>
+                    <h2 class="storia-title">Tradizione dal 1985</h2>
+                    <p class="storia-description">
+                        Il <strong>Nuovo Rustichello</strong> nasce dalla passione per la cucina tradizionale lombarda 
+                        e dal desiderio di offrire un'esperienza culinaria autentica nel cuore di Brescia.
+                    </p>
+                    <p class="storia-description">
+                        Da quasi quarant'anni, la nostra famiglia porta avanti la tradizione con ricette 
+                        tramandate di generazione in generazione, utilizzando solo ingredienti freschi 
+                        e di prima qualità provenienti dal territorio lombardo.
+                    </p>
+                    
+                    <div class="storia-highlights">
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>40 Anni di Tradizione</h4>
+                                <p>Esperienza e passione dal 1985</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Gestione Familiare</h4>
+                                <p>Calore e accoglienza di casa</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Ingredienti Locali</h4>
+                                <p>Freschezza e qualità garantita</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-storia">Scopri di Più</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">L'Esperienza Rustichello</h2>
+                <p class="section-subtitle">Un viaggio culinario attraverso i sapori della tradizione lombarda</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-step="1">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-content">
+                        <h3>Benvenuto</h3>
+                        <p>Ti accogliamo con il calore di una famiglia, in un ambiente che profuma di tradizione</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="2">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-content">
+                        <h3>Aperitivo</h3>
+                        <p>Un assaggio delle nostre specialità per risvegliare il palato e prepararti all'esperienza</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-wine-glass"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="3">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-content">
+                        <h3>I Nostri Risotti</h3>
+                        <p>Il fiore all'occhiello della cucina lombarda, preparato secondo la ricetta tradizionale</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="4">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-content">
+                        <h3>Pasta Fatta in Casa</h3>
+                        <p>Tortellini, tagliatelle e specialità preparate fresche ogni giorno nelle nostre cucine</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-step="5">
+                    <div class="timeline-number">05</div>
+                    <div class="timeline-content">
+                        <h3>Dolce Ricordo</h3>
+                        <p>I nostri dolci della tradizione per concludere in dolcezza la tua esperienza</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Map -->
+    <section class="location-section" id="location">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Vieni a Trovarci</h2>
+                <p class="section-subtitle">Nel cuore di Brescia, dove la tradizione ti aspetta</p>
+            </div>
+
+            <div class="location-wrapper">
+                <div class="location-info">
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="location-details">
+                            <h3>Indirizzo</h3>
+                            <p>Via dei Sapori 25<br>25121 Brescia (BS), Italia</p>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="location-details">
+                            <h3>Orari di Apertura</h3>
+                            <div class="schedule">
+                                <div class="schedule-item">
+                                    <span class="day">Martedì - Giovedì</span>
+                                    <span class="hours">19:00 - 23:00</span>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="day">Venerdì - Sabato</span>
+                                    <span class="hours">19:00 - 24:00</span>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="day">Domenica</span>
+                                    <span class="hours">12:00 - 15:00 | 19:00 - 23:00</span>
+                                </div>
+                                <div class="schedule-item closed">
+                                    <span class="day">Lunedì</span>
+                                    <span class="hours">Chiuso</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="location-details">
+                            <h3>Come Raggiungerci</h3>
+                            <div class="transport-options">
+                                <div class="transport-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>Parcheggio pubblico a 100m</span>
+                                </div>
+                                <div class="transport-item">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Fermata autobus linea 3, 7, 12</span>
+                                </div>
+                                <div class="transport-item">
+                                    <i class="fas fa-walking"></i>
+                                    <span>Centro storico a 5 minuti a piedi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-actions">
+                        <button class="btn-location" onclick="getDirections()">
+                            <i class="fas fa-directions"></i>
+                            Ottieni Indicazioni
+                        </button>
+                        <a href="tel:+390302520" class="btn-location secondary">
+                            <i class="fas fa-phone"></i>
+                            Chiamaci Ora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <!-- Google Maps Embed con Marker per Brescia -->
+                    <iframe 
+                        id="google-map-iframe"
+                        class="google-map-iframe"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=it&amp;q=45.591239608116304,10.159089642327874+(Nuovo%20Rustichello%20Ristorante)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <!-- Map Overlay Info -->
+                    <div class="map-overlay">
+                        <div class="map-marker-info">
+                            <h4>🍽️ Nuovo Rustichello</h4>
+                            <p>Autentica Tradizione Italiana</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-text">4.8 (156 recensioni)</span>
+                            </div>
+                            <div class="map-actions">
+                                <button onclick="openInGoogleMaps()" class="btn-map-action">
+                                    <i class="fas fa-directions"></i>
+                                    Indicazioni
+                                </button>
+                                <button onclick="viewLargerMap()" class="btn-map-action secondary">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    Ingrandisci
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Street View Mini -->
+            <div class="street-view-section">
+                <h3>Anteprima della Nostra Location</h3>
+                <div class="street-view-container">
+                    <!-- Google Street View Embed per Brescia Centro -->
+                    <iframe
+                        class="street-view-iframe"
+                        src="https://www.google.com/maps/embed?pb=!4v1692000000000!6m8!1m7!1s2a0QMNmN46dGAaE3cWyqXQ!2m2!1d45.591239608116304!2d10.159089642327874!3f45!4f0!5f0.7820865974627469"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <!-- Street View Overlay -->
+                    <div class="street-view-overlay">
+                        <div class="street-view-info">
+                            <i class="fas fa-street-view"></i>
+                            <span>Vista dalla strada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Reservation -->
+    <section class="contact-section" id="contact">
+        <div class="contact-background">
+            <div class="contact-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="contact-title">Prenota la Tua Esperienza</h2>
+                    <p class="contact-subtitle">Vieni a gustare l'autentica cucina lombarda in un'atmosfera familiare e accogliente</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Indirizzo</h4>
+                                <p>Via dei Sapori 25, Brescia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefono</h4>
+                                <p>+39 030 25203</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Orari</h4>
+                                <p>Mar-Dom 19:00-23:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@nuovorustichello.it</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reservation-form">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Cognome" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Telefono" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Numero persone</option>
+                                <option value="2">2 persone</option>
+                                <option value="4">4 persone</option>
+                                <option value="6">6 persone</option>
+                                <option value="8">8+ persone</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea placeholder="Note speciali, allergie o intolleranze" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Invia Prenotazione</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        
+                        <div class="form-alternative">
+                            <p>Oppure chiamaci direttamente:</p>
+                            <a href="tel:+390302520" class="phone-cta">
+                                <i class="fas fa-phone"></i>
+                                030 25203
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="./images/logo.jpg" alt="Nuovo Rustichello" class="footer-logo">
+                    <h3>Nuovo <span>Rustichello</span></h3>
+                    <p>Autentica Tradizione Italiana dal 1985</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Menu</h4>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#menu">Specialità</a>
+                        <a href="#storia">La Nostra Storia</a>
+                        <a href="#contact">Contatti</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Info Utili</h4>
+                        <a href="#location">Come Raggiungerci</a>
+                        <a href="tel:+390302520">Prenotazioni</a>
+                        <a href="#">Allergie e Intolleranze</a>
+                        <a href="#">Carta dei Vini</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contatti</h4>
+                        <a href="tel:+390302520"><i class="fas fa-phone"></i> 030 25203</a>
+                        <a href="mailto:info@nuovorustichello.it"><i class="fas fa-envelope"></i> Email</a>
+                        <a href="#location"><i class="fas fa-map-marker-alt"></i> Via dei Sapori 25, Brescia</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nuovo Rustichello. Tutti i diritti riservati. | P.IVA: 12345678901</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
