@@ -157,6 +157,13 @@ p {
 }
 
 .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    height: 100%;
+    padding: var(--spacing-lg);
     text-align: center;
     color: var(--white);
 }
@@ -204,18 +211,21 @@ p {
 }
 
 .loading-progress {
-    width: 200px;
-    height: 3px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 2px;
+    width: min(480px, 70%);
+    max-width: 480px;
+    height: 6px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 999px;
     overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35) inset;
 }
 
 .progress-bar {
     height: 100%;
     background: var(--accent-gradient);
     width: 0%;
-    transition: width var(--transition-normal);
+    transition: width var(--transition-normal), box-shadow 0.3s ease;
+    box-shadow: 0 6px 30px rgba(255,180,0,0.08);
 }
 
 /* ===== NAVIGATION ===== */
@@ -1282,7 +1292,6 @@ p {
 }
 
 .form-group input,
-.form-group select,
 .form-group textarea {
     width: 100%;
     padding: var(--spacing-sm);
@@ -1292,6 +1301,41 @@ p {
     border-radius: var(--radius-md);
     font-family: inherit;
     transition: all var(--transition-normal);
+}
+
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-sm);
+    padding-right: calc(var(--spacing-lg) * 1.5);
+    border: 2px solid rgba(255,255,255,0.28);
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    color: var(--white);
+    border-radius: var(--radius-md);
+    font-family: inherit;
+    transition: all var(--transition-normal);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z' fill='%23ffb400'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px 16px;
+}
+
+/* remove default IE arrow */
+.form-group select::-ms-expand { display: none; }
+
+/* dropdown options styling (may vary per browser) */
+.form-group select option {
+    background: var(--white);
+    color: var(--dark-primary);
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 30px rgba(255,180,0,0.12);
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
 }
 
 .form-group input::placeholder,
